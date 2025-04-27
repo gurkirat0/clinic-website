@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../fontawesome/fontawesome-free-6.7.2-web/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/node_modules/jquery/dist/jquery.js"></script>
+    <style>
+        body {
+            color: #3D8D7A;
+        }
+        .navbar {
+            background-color:white;
+        }
+        .service-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            color: #3D8D7A;
+        }
+        .btn-appointment {
+            background-color: #A3D1C6;
+            color: #F2F9FF;
+        }
+        #services {
+            background-color: white;
+        }
+        .scrollspy-example{
+            position: relative;
+            height: 250px;
+            overflow-y: scroll;
+            padding: 1rem;
+            border: 1px solid #dee2e6;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-uppercase" style="color: #3D8D7A;" href="#">
+                <img src="../Clinic project/images/dental png icon.png" alt="icon" height="35px" width="45px" class="me-1 img-fluid"> Sangha Dental Clinic
+            </a>
+        </div>
+    </nav>
+
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+            <p class="text-uppercase fw-semibold text-secondary" style="letter-spacing: 5px;">Our Services</p>
+            <button type="button" class="btn m-2 position-relative" data-bs-toggle="modal" data-bs-target="#offers" style="background-color: #3D8D7A; color: #FFFFFF;">Offers
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger">7</span>
+            </button>
+            <div class="modal fade" id="offers">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-success" id="offersModalLabel">Clinic Offers</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="offerSpinner" class="d-flex justify-content-center my-4">
+                                <div class="spinner-border text-success" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                            <div id="offerContent" class="d-none">
+                                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="10" class="scrollspy-example" id="scroll-container" tabindex="0">
+                                    <section id="MainOffers">
+                                        <h5>🦷 Offer 1</h5><p>20% off on Teeth Whitening for new patients</p>
+                                        <h5>👶 Offer 2</h5><p>Free dental checkup for kids under 10</p>
+                                        <h5>👵 Offer 3</h5><p>Senior citizens get 15% discount on Root Canal</p>
+                                    </section>
+                                    <hr width="95%">
+                                    <section id="AdditionalOffers">
+                                        <h5>🪥 Offer 4</h5><p>Buy 1 cleaning, get 1 polishing free</p>
+                                        <h5>🦷 Offer 5</h5><p>Flat ₹500 off on dental implants</p>
+                                        <h5>🦷 Offer 6</h5><p>Free consultation for first-time visitors</p>
+                                        <h5>🦷 Offer 7</h5><p>10% off on braces installation</p>
+                                    </section>
+                                </div>
+                            </div>  
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            </div>
+            <h2 class="display-6 fw-semibold pb-4">Service-wise Price Details <br> <span class="text-success">for Kids & Adults</span></h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover align-middle text-center">
+                    <thead class="table-light">
+                        <tr class="fw-semibold">
+                            <th class="h5" rowspan="2">Service</th>
+                            <th class="h5" rowspan="2">Description</th>
+                            <th class="h6" colspan="2">Price Range</th>
+                        </tr>
+                        <tr>
+                            <th class="h6">For Kids</th>
+                            <th class="h6">For Elders</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                          <td class="fw-medium">Teeth Whitening</td>
+                          <td class="text-muted">Brighten your smile with professional teeth whitening treatments.</td>
+                          <td class="text-success">₹1500 - ₹3000</td>
+                          <td class="text-success">₹2500 - ₹5000</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-medium">Dental Implants</td>
+                          <td class="text-muted">Replace missing teeth with durable and natural-looking implants.</td>
+                          <td class="text-success">Not Applicable</td>
+                          <td class="text-success">₹25,000 - ₹60,000</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-medium">Orthodontics</td>
+                          <td class="text-muted">Straighten teeth and correct jaw alignment with braces or clear aligners.</td>
+                          <td class="text-success">₹20,000 - ₹45,000</td>
+                          <td class="text-success">₹30,000 - ₹80,000</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-medium">Root Canal Therapy</td>
+                          <td class="text-muted">Save infected teeth with pain-free root canal treatments.</td>
+                          <td class="text-success">₹2500 - ₹5000</td>
+                          <td class="text-success">₹4000 - ₹8000</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-medium">Gum Disease Treatment</td>
+                          <td class="text-muted">Prevent and treat gum infections with expert periodontal care.</td>
+                          <td class="text-success">₹1000 - ₹3000</td>
+                          <td class="text-success">₹2000 - ₹5000</td>
+                        </tr>
+                        <tr>
+                          <td class="fw-medium">Cosmetic Dentistry</td>
+                          <td class="text-muted">Enhance your smile with veneers, bonding, and aesthetic restorations.</td>
+                          <td class="text-success">₹3000 - ₹10,000</td>
+                          <td class="text-success">₹10,000 - ₹25,000</td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <nav class="mt-0">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="ca1Clinic.html" style="background-color: #ffffff; color: #000;">Home Page</a></li>
+            <li class="page-item active disabled"><a class="page-link" href="ca1Clinic2.html"  style="background-color: #3D8D7A; color: #fff;">Prices</a></li>
+        </ul>
+    </nav>
+
+    <footer class="text-white text-center py-3" style="background-color: #3D8D7A;">
+        <p>&copy; 2025 | Sangha Dental Clinic | All Rights Reserved.</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mb-0">
+              <li class="breadcrumb-item"><a href="ca1Clinic.html" style="color: #FFFFFF;">Main Page</a></li>
+              <li class="breadcrumb-item active" aria-current="page">More Info</li>
+            </ol>
+          </nav>
+    </footer>
+
+    <script>
+        const offersModal = document.getElementById('offers');
+        offersModal.addEventListener('show.bs.modal', function () {
+            document.getElementById('offerSpinner').classList.remove('d-none');
+            document.getElementById('offerContent').classList.add('d-none');
+    
+            setTimeout(() => {
+                document.getElementById('offerSpinner').classList.add('d-none');
+                document.getElementById('offerContent').classList.remove('d-none');
+            }, 2000);
+        });
+    </script>
+    
+</body>
+</html>

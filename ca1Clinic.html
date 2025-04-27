@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../fontawesome/fontawesome-free-6.7.2-web/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/node_modules/jquery/dist/jquery.js"></script>
+    <style>
+        body {
+            color: #3D8D7A;
+        }
+        .navbar {
+            background-color:white;
+        }
+        .service-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            color: #3D8D7A;
+        }
+        .btn-appointment {
+            background-color: #A3D1C6;
+            color: #F2F9FF;
+        }
+        header {
+          background: linear-gradient(rgba(255, 255, 255, 0.626), rgba(116, 116, 116, 0.4)), url('../Clinic project/images/header\ background.jpg');
+            
+        }
+        #services {
+            background-color: white;
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: #3D8D7A;
+            border-radius: 15%;
+            padding: 25px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 10%;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-uppercase" style="color: #3D8D7A;" href="#">
+                <img src="../Clinic project/images/dental png icon.png" alt="icon" height="35px" width="45px" class="me-1"> Sangha Dental Clinic
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-1 mb-3">
+                        <a class="nav-link btn border border-success text-success bg-white rounded-pill" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item px-1 mb-3">
+                        <a class="nav-link btn border border-success text-success bg-white rounded-pill" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item px-1 mb-3">
+                        <a class="nav-link btn border border-success text-success bg-white rounded-pill" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>   
+            
+    
+    <header class="py-5 col-sm-12">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-12 text-center mb-4">
+                    <h1 class="fw-bold display-4 ms-5 mt-2" style="color: #214f44;">Make your <span style="color: #3D8D7A;">perfect <br> smile</span> even better</h1>
+                    <p class="fs-5 ms-5" style="color: #214f44;">We are a team of highly skilled and experienced <br> medical professionals including doctors & nurses.</p>
+                    <ul>
+                        <li class="nav-item px-1 list-unstyled">
+                            <button type="button" class="btn" style="background-color: #3D8D7A; color: #fff;" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                                Appointment
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="modal fade" id="appointmentModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-start" id="modalLabel">Manage Appointment</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="alert alert-info alert-dismissible fade show text-start" role="alert">
+                                        <strong>Note: </strong>Please fill the details carefully
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#book">Book Appointment</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#cancel">Cancel Appointment</a>
+                                        </li>
+                                    </ul>
+                    
+                                    <div class="tab-content mt-3">
+                                        <div class="tab-pane fade show active" id="book">
+                                            <form class="text-start">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Full Name</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Date</label>
+                                                    <input type="date" class="form-control" required>
+                                                </div>
+                                                <button type="submit" class="btn btn-success">Book Appointment</button>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="cancel">
+                                            <form class="text-start">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Appointment ID</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div>
+                                                <button type="submit" class="btn btn-danger">Cancel Appointment</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mb-4">
+                    <div id="reviewCarousel" class="carousel slide position-relative mt-" data-bs-ride="carousel" data-bs-interval="2000" style="height: 450px; background-image: url('../Clinic project/images/headercarouselBG.jpg'); background-size: cover; background-position: center; border-radius: 20px;">
+                    
+                      <div class="position-absolute top-0 start-50 translate-middle badge bg-light bg-opacity-75 px-3 py-2" style="color: #3D8D7A; z-index: 10;">
+                        <p class="lead"> <span class="text-center lead fw-medium">Timings: </span><br>
+                            <span class="lead fw-medium">Weekdays:</span> <span class="text-dark"> 10:00 AM - 6:00 PM </span> <br><span class="lead fw-medium">Saturday:</span> <span class="text-dark"> 11:00 AM - 2:00 PM </span>
+                        </p>
+                      </div>
+                      
+                      <div class="col-sm-2">
+                      <div class="carousel-inner position-absolute start-0 translate-middle badge w-50 align-items-center justify-content-center" style="color: #3D8D7A; top: 100%;">
+                        <div class="carousel-item active w-100">
+                          <div class="text-center bg-white bg-opacity-75 rounded px-1 py-4 mb-3 mx-3" style="font-size: 16px;">
+                            <h5 class="mb-3 fw-medium lead" style="font-size: 24px;">Ananya Sharma</h5>
+                            <p class="mb-0 lead text-dark">"Amazing service!<br> The staff is really kind "</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item w-100">
+                          <div class="text-center bg-white bg-opacity-75 rounded px-1 py-4 mb-3 mx-3" style="font-size: 16px;">
+                            <h5 class="mb-3 fw-medium lead" style="font-size: 24px;">Rohan Verma</h5>
+                            <p class="mb-0 lead text-dark">"Excellent care with modern facilities.<br> Highly recommended."</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item w-100">
+                          <div class="text-center bg-white bg-opacity-75 rounded px-1 py-4 mb-3 mx-3" style="font-size: 16px;">
+                            <h5 class="mb-3 fw-medium lead" style="font-size: 24px;">Priya Desai</h5>
+                            <p class="mb-0 lead text-dark">"Very clean and hygienic.<br> Loved the painless treatment!"</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    </div>
+                  </div> 
+            </div>
+        </div>
+    </header>
+    
+    <section id="Home" class="py-5 mt-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-3 mb-md-0">
+              <img src="https://sp.yimg.com/ib/th?id=OIP.JOYfcWKVMCtwHyT1DPvCLgHaE8&pid=Api&w=148&h=148&c=7&dpr=2&rs=1" alt="About Us Image" class="img-fluid">
+            </div>
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <h2 class="fw-bold" style="color: #3D8D7A;">The Best <span style="color: #A3D1C6;"> Dental Clinic </span> That You Can Trust</h2>
+                <p class="lead text-dark">At Sangha Dental Clinic, we blend modern technology with compassionate care to deliver top-notch dental services. Our commitment to excellence ensures that every patient receives personalized attention and the highest standard of care. We utilize state-of-the-art equipment, maintain a welcoming and comfortable environment, and simplify appointment booking for your convenience. Our clinic is always monitored to ensure safety and quality, so you can relax and enjoy a seamless dental experience.</p>
+                <div class="row text-uppercase">
+                    <div class="col-md-6 col-sm-12 d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-circle-check text-success me-2"></i>
+                        <span>Modern Equipment</span>
+                    </div>
+                    <div class="col-md-6 col-sm-12 d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-circle-check text-success me-2"></i>
+                        <span>Comfortable Clinic</span>
+                    </div>
+                    <div class="col-md-6 col-sm-12 d-flex align-items-center">
+                        <i class="fa-solid fa-circle-check text-success me-2"></i>
+                        <span>Easy Appointment Booking</span>
+                    </div>
+                    <div class="col-md-6 col-sm-12 d-flex align-items-center">
+                        <i class="fa-solid fa-circle-check text-success me-2"></i>
+                        <span>Always Monitored</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <div class="container mt-5">
+      <div class="card shadow-lg p-4">
+          <h2 class="text-left" style="color: #3D8D7A;">For Queries</h2>
+          <hr style="height: 15px; width: 20%; background-color: #3D8D7A; border: none;" class="mb-4">
+          <p class="fs-5">BEGIN YOUR JOURNEY OF DENTAL WELLNESS. <br> POST YOUR QUERY HERE & AVAIL 'A CONSULTATION & SMILE ANALYSIS.'</p>
+          <form>
+              <div class="mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+              </div>
+              <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+              </div>
+              <div class="mb-3">
+                  <label for="queryType" class="form-label">Select Query Type</label>
+                  <input type="text" class="form-control" id="queryType" list="queryList" placeholder="e.g., Toothache, Cavity, Braces Info">
+                  <datalist id="queryList">
+                      <option value="Toothache">
+                      <option value="Cavity">
+                      <option value="Braces Info">
+                      <option value="Root Canal">
+                      <option value="Pediatric Checkup">
+                      <option value="Cleaning & Whitening">
+                      <option value="Tooth Extraction">
+                      <option value="Gum Problems">
+                      <option value="Oral Surgery">
+                      <option value="Smile Makeover">
+                  </datalist>
+              </div>
+              <div class="mb-3">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea class="form-control" id="message" rows="4" placeholder="Enter your query" required></textarea>
+              </div>
+              <button id="myTooltipBtn" type="submit" class="btn w-100" style="color: #FFFFFF; background-color: #3D8D7A;" 
+              data-bs-toggle="tooltip" 
+              data-bs-html="true" 
+              data-bs-placement="bottom" 
+              title="After submitting the query you will receive response via mail or SMS">
+                Submit Query
+              </button>
+          </form>
+      </div>
+  </div>
+  
+      
+
+    <section id="services" class="py-5">
+        <div class="container text-center">
+          <h6 class="text-uppercase fw-semibold" style="letter-spacing: 5px;">Our services</h6>
+          <h2 class="h2 fw-bold pb-4">A Wide Range of Services <br> <span style="color: #A3D1C6;"> for Your Best Smile </span></h2>
+      
+          <div id="serviceCarousel" class="carousel slide" data-bs-interval="false">
+            <div class="carousel-inner">
+      
+              <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  <div class="col-md-4">
+                    <div class="card mb-3">
+                      <img src="https://tse1.mm.bing.net/th?id=OIP.bUcz5lgVj0DiCBJAIXO_GAHaE8&pid=Api&P=0&h=220" class="card-img-top" style="height: 240px; object-fit: cover;" alt="Teeth Whitening">
+                      <div class="card-body">
+                        <h5 class="card-title">Teeth Whitening</h5>
+                        <p class="card-text">Brighten your smile with professional teeth whitening treatments.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-3">
+                      <img src="https://tse2.mm.bing.net/th?id=OIP.ne5o91M6fkq2usU6TuTdBwHaE8&pid=Api&P=0&h=220" class="card-img-top" style="height: 240px; object-fit: cover;" alt="Dental Implants">
+                      <div class="card-body">
+                        <h5 class="card-title">Dental Implants</h5>
+                        <p class="card-text">Replace missing teeth with durable and natural-looking implants.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-md-4">
+                    <div class="card mb-3">
+                      <img src="https://tse3.mm.bing.net/th?id=OIP.ZyTqAhlxcxQ8rhTFY0UwRAHaEK&pid=Api&P=0&h=220" class="card-img-top" style="height: 240px; object-fit: cover;" alt="Orthodontics">
+                      <div class="card-body">
+                        <h5 class="card-title">Orthodontics</h5>
+                        <p class="card-text">Straighten teeth and correct jaw alignment with braces or clear aligners.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-3">
+                      <img src="https://tse1.mm.bing.net/th?id=OIP.YM9KkZvcsN4ckvTSdXcrfwHaE8&pid=Api&P=0&h=220" class="card-img-top" style="height: 240px; object-fit: cover;" alt="Root Canal Therapy">
+                      <div class="card-body">
+                        <h5 class="card-title">Root Canal Therapy</h5>
+                        <p class="card-text">Save infected teeth with pain-free root canal treatments.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-md-4">
+                    <div class="card mb-3">
+                      <img src="https://tse1.mm.bing.net/th?id=OIP.Xub9CALVWL30Uwzd7SqdDAHaE8&pid=Api&P=0&h=220" class="card-img-top" style="height: 240px; object-fit: cover;" alt="Gum Disease Treatment">
+                      <div class="card-body">
+                        <h5 class="card-title">Gum Disease Treatment</h5>
+                        <p class="card-text">Prevent and treat gum infections with expert periodontal care.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-3">
+                      <img src="https://tse1.mm.bing.net/th?id=OIP.iXmO8BWkGVqQ5gVrsQGlDQHaE8&pid=Api&P=0&h=220" class="card-img-top" style="height: 240px; object-fit: cover;" alt="Cosmetic Dentistry">
+                      <div class="card-body">
+                        <h5 class="card-title">Cosmetic Dentistry</h5>
+                        <p class="card-text">Enhance your smile with veneers, bonding, and aesthetic restorations.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+      
+            <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+    
+            
+    
+    <nav class="my-2">
+        <ul class="pagination justify-content-center">
+            <li class="page-item active disabled"><a class="page-link" href="ca1Clinic.html"  style="background-color: #3D8D7A; color: #fff;">Home Page</a></li>
+            <li class="page-item"><a class="page-link" href="ca1Clinic2.html" style="background-color: #ffffff; color: #000;">Prices</a></li>
+        </ul>
+    </nav>
+
+<section id="doctors" class="container pb-2 text-uppercase fw-semibold">
+    <div class="row mt-5">
+        <h2 class="text-left fw-bold py-2" style="color: #3D8D7A;">Our Doctors</h2>
+        <div class="col-md-4">
+            <div class="card text-center py-3" style="height: 100px; background-color: #3D8D7A; color: white;">
+                <h5>Dr. Avninder Sangha</h5>
+                <p>Bachelor of Dental Surgery</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center py-1" style="height: 100px; background-color: #3D8D7A; color: white;">
+                <h5>Dr. Navpreet Kaur</h5>
+                <p>Bachelor of Dental Surgery <br> P.G.D in Cosmetic and Aesthetic Dentistery</p>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center py-3" style="height: 100px; background-color: #3D8D7A; color: white;">
+                <h5>Dr. Rohit Duggal</h5>
+                <p>M.D.S. (Orthodontia)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="py-5 text-center">
+        <div class="container mt-5 py-3" style="background-color: #FFFFFF; box-shadow: 0px 4px 8px rgba(0.2, 0.1, 0.2, 0.2);">
+            <div class="row">
+                <div class="col-md-6" style="display: flex; justify-content: space-between;">
+                    <div class="py-5">
+                        <h2 class="text-center" style="color: #3D8D7A;"><i class="fas fa-phone"></i> Contact Us</h2>
+                        <hr style="height: 5px; width: 90%; background-color: #3D8D7A; border: none; margin: auto;">
+                        <div class="mt-4">
+                            <h5><i class="fas fa-map-marker-alt"></i> Address</h5>
+                            <p>Old Post Office Rd, Opp. Govt Senior Secondary School Boys, Phagwara, Punjab-144 401</p>
+                            <p class="text-center">6Q9F+H8 Phagwara,Punjab</p>
+                            <h5><i class="fas fa-phone"></i> Phone</h5>
+                            <button type="button" class="btn" style="background-color: #A3D1C6; color: #000;" data-bs-toggle="popover" data-bs-placement="bottom" title="Timings" data-bs-content="Note: The operational timings to answer your query is from 10am - 5pm only">
+                              01824-508659 | 01824-329459
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d270.6326410913737!2d75.7726622!3d31.2189399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391af4c2a0442e4d%3A0x6cc4e008b88fd96f!2sDr.%20Naranjan%20Singh%20Biring%20Clinic.%20Dr.%20Narinderjit%20Singh!5e0!3m2!1sen!2sin!4v1633029873645!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-white text-center py-3" style="background-color: #3D8D7A;">
+        <p>&copy; 2025 | Sangha Dental Clinic | All Rights Reserved.</p>
+        <nav>
+            <ol class="breadcrumb justify-content-center mb-0">
+              <li class="breadcrumb-item active" aria-current="page">Main Page</li>
+              <li class="breadcrumb-item"><a href="ca1Clinic2.html" style="color: #FFFFFF;">More Info</a></li>
+            </ol>
+          </nav>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+          popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl);
+          });
+        });
+      document.addEventListener('DOMContentLoaded', function () {
+        new bootstrap.Tooltip(document.getElementById('myTooltipBtn'));
+      });
+    </script>
+
+</body>
+</html>
